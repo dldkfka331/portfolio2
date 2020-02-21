@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barriecito|Roboto:300,400,500,700&display=swap" rel="stylesheet">
 
 
-
+    
     <!--[if lt IE 9]> 
        <script type="text/javascript">
           alert("현재 포트폴리오 사이트는 크롬 브라우저를 기준으로 제작되었습니다. 크롬브라우저를 이용해주세요.")
@@ -127,7 +127,7 @@
                             <strong>About me</strong>
                             <div class="me_img">
                                 <img src="assets/img/me.png" alt="이미지">
-                                <p class="me_img_text">web pub·lish·er </p>
+                                <p class="me_img_text" data-3700="transform: rotate(-90deg) translateX(20vw) translateY(-28vw)"  data-5300="transform: rotate(-90deg) translateX(40vw) translateY(-28vw)">web pub·lish·er </p>
                             </div>
                             <p>안녕하세요.
                                 웹 퍼블리셔를
@@ -149,7 +149,7 @@
                     <div class="history_img">
                         <img src="assets/img/port003.png" alt="">
                     </div>
-                    <div class="history_tit"><span>my</span><span>story</span></div>
+                    <div class="history_tit"><span data-5600="transform: translateX(0px)" data-6400="transform: translateX(300px)">my</span><span data-5600="transform: translateX(200px)" data-6400="transform: translateX(-100px)">story</span></div>
                     <div class="histort_bg">
                         <div class="history_text">
                             <strong>Dream</strong>
@@ -173,17 +173,31 @@
 <text>2</text>
                     </div>
                     <div class="web_tit">website<br> that i create</div>
-                    <div class="web_list">
-                        <div class="web_list01">
-                            <div class="wl_bg"></div>
-                            <div class="wl_text">
-                                <h4>Webstandard Site</h4>
-                                <p><span>웹 표준</span>을 준수하여 만든 웹 표준 사이트입니다.</p>
+                    <div class="web_wrap" data-10500="top: 100%" data-11300="top: 0%">
+                        <div class="web_list">
+                            <div class="web_list01" data-11500= "left : 3vw" data-12500= "left : -80vw">
+                                <div class="wl_bg"></div>
+                                <div class="wl_text">
+                                    <h4>Webstandard Site</h4>
+                                    <a href="#"  class="wl_view"></a>
+                                </div>
                             </div>
+                            <div class="web_list02" data-12500= "left : 6vw" data-13500= "left : -80vw">  </div>
+                            <div class="web_list03" data-13500= "left : 9vw" data-14500= "left : -80vw">  </div>
+                            <div class="web_list04" data-14500= "left : 12vw" data-15500= "left : -80vw">  </div>
                         </div>
-                        <div class="web_list02">  </div>
-                        <div class="web_list03">  </div>
-                    </div>
+                    </div>          
+                    <div class="mobile_wrap">
+                        <div class="mobile_list">
+                            <div class="mobile_list01">
+                                <div class="mb_bg"></div>
+                                <div class="mb_text"></div>
+                            </div>
+                            <div class="mobile_list02"></div>
+                            <div class="mobile_list03"></div>
+                            <div class="mobile_list04"></div>
+                        </div>
+                    </div>          
                 </div>
             </div>       
         </section>        
@@ -200,6 +214,7 @@
 
     <!--script-->
     <script src="assets/js/jquery.min.1.12.4.js"></script>
+    <script src="assets/js/jquery-ui.min.1.12.1.js"></script>
     <script src="assets/js/skrollr.js"></script>
     <script src="assets/js/scrollEasing.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
@@ -209,6 +224,7 @@
             let wScroll = $(this).scrollTop();
             $(".ScrollTop span").text(wScroll);
         });
+        
     </script>
 </body>
 </html>

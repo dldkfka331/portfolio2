@@ -26,7 +26,7 @@ body{
 #section1 {background: #000; height: 100vh; }
 #section2 {background: #000;}
 #section3 {background: rgb(139, 86, 124); padding-bottom: 60vh;}
-#section4 {height: 160vh;}
+#section4 {}
 #section5 {}
 #section6 {}
 
@@ -124,7 +124,7 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 .who_text_about strong {font-size: 14vw; font-family: var(--font-main7);}
 .me_img {position: absolute; left: 0; top: 50%; width: 45%; }
 .me_img img {width: 80%; border-radius: 5%;}
-.me_img .me_img_text {font-size: 7vw; transform: rotate(-90deg) translateX(20vw) translateY(-25vw);  white-space: nowrap; font-family: var(--font-main3); -webkit-text-fill-color: transparent; -webkit-text-stroke-color: #000; -webkit-text-stroke-width: 2px; }
+.me_img .me_img_text {font-size: 7vw; white-space: nowrap; font-family: var(--font-main3); -webkit-text-fill-color: transparent; -webkit-text-stroke-color: #000; -webkit-text-stroke-width: 2px; }
 .who_text_about p {font-size: 3vw; width: 45%; margin:20vh 0 0 50%; text-align: right; font-family: var(--font-kr); letter-spacing: 5px; word-break: keep-all;}
 
 
@@ -140,17 +140,27 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 
 
 /*web*/
-.web {position: relative;}
-.web_bg {background: url(https://images.unsplash.com/photo-1550876542-8f7f453d0bed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80) no-repeat; background-size: 100%; position: fixed; height: 100vh; width: 100%; top: 0; z-index: -1; }
+.web {position: relative; height: 500vh;}
+.web_bg {background: url(https://images.unsplash.com/photo-1550876542-8f7f453d0bed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80) no-repeat; background-size: 100%; filter: hue-rotate(80deg); position: fixed; height: 100vh; width: 100%; top: 0; z-index: -1; }
 .web_tit {font-size: 10vw; text-align: center; padding-top: 15vw; text-transform: uppercase; font-family: var(--font-main7); color: #fff; line-height: 1; background: #000; padding-bottom: 15vw; margin-bottom: 50vw;}
-.web_list {background: #000; height: 100vh; position: relative;}
-.web_list > div {display: flex; align-items: center; justify-content: center; overflow: hidden;}
-.web_list .wl_bg {width: 60%; height: 100%; }
-.web_list .wl_text {width: 40%; text-align: center; margin-top: -10vw;}
-.web_list .wl_text h4 {font-size: 3vw; font-weight: bold; font-family: var(--font-main7); color: #208022; padding-bottom: 3vw;}
-.web_list .wl_text p {font-size: 1.3vw; font-family: var(--font-kr);}
-.web_list .wl_text p span{background: #208022; padding: 1%;}
-.web_list01 {width: 75%; height: 100vh; background: rgb(255, 194, 0); border-radius: 50px; position: absolute; top: 0; left: 3vw; z-index: 3;}
-.web_list01 .wl_bg {background: url(../img/new_site01.png) no-repeat; background-size: contain; background-position: center  center;}
-.web_list02 {width: 75%; height: 100vh; background: rgb(43, 73, 172); border-radius: 50px; position: absolute; top: 0; left: 6vw; z-index: 2;}
-.web_list03 {width: 75%; height: 100vh; background: rgb(235, 6, 13); border-radius: 50px; position: absolute; top: 0; left: 9vw; z-index: 1;}
+
+.web_wrap {background: #000; width: 100%; position: fixed; top: 100%; left: 0; height: 100vh;  }
+.web_list { position: relative; height: 500vh; width: 100%;}
+.web_list > div {display: flex; align-items: center; justify-content: center; overflow: hidden; padding-right: 2vw; width: 75%; height: 100vh;}
+.web_list .wl_bg {width: 120%; height: 120%; }
+.web_list .wl_text {width: 40%; text-align: right; margin-top: -10vw; margin-left: -15vw; position: relative;}
+
+.web_list .wl_text h4 {font-size: 3.5vw; letter-spacing: 4px; font-weight: bold; font-family: var(--font-main1); background-color: #208022; margin: -4%; padding: 0% 3%; white-space: nowrap; }
+.web_list .wl_text .wl_view {background: url(../img/arrow.png) no-repeat; position: absolute; bottom: -7vw; right: -2vw; width: 200px; height: 80px; background-size: contain;}
+
+
+.web_list01 {background: rgb(255, 194, 0); border-radius: 50px; position: absolute; top: 0; left: 3vw; z-index: 3;}
+.web_list01 .wl_bg {background: url(../img/Old-TV-Mockup01.png) no-repeat; background-size: contain; background-position: center  center;}
+.web_list02 {background: rgb(43, 73, 172); border-radius: 50px; position: absolute; top: 0; left: 6vw; z-index: 2;}
+.web_list03 {background: rgb(235, 6, 13); border-radius: 50px; position: absolute; top: 0; left: 9vw; z-index: 1;}
+.web_list04 {background: rgb(243, 112, 40); border-radius: 50px; position: absolute; top: 0; left: 12vw; z-index: 0;}
+
+.mobile_wrap {margin-top: 800vh; height: 150vh; background: #333;}
+.mobile_list {display: flex; align-items: center; justify-content: space-around; height: 100vh;}
+.mobile_list > div {width: 80%; height: 100vh; background: #000;}
+.mobile_list01 .mb_bg{width: 100%; height: 100%; background: url(../img/Realistic01.png) no-repeat center center; background-size: contain;}
