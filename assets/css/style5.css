@@ -110,9 +110,13 @@ body{
 .who .who_tit {text-align: center;}
 .who .who_tit p {width: 80%; margin: 0 auto; font-family: var(--font-main7); color: #fff; font-size: 7vw; line-height: 1;}
 .who .who_tit p span {display: block; margin-top: 20vh; font-size: 2vw; font-family: var(--font-roboto); }
-.who_bg { margin-top: 20vw; width: 100%; height: 70vw; background: url(../img/port002.png) no-repeat; background-size: contain;}
+.who_bg { margin-top: 20vw; width: 100%; height: 70vw;  position: relative;}
+.who_bg01 {width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: url(../img/port002_01.png) no-repeat; background-size: contain; }
+.who_bg02 {width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: url(../img/port002_02.png) no-repeat; background-size: contain; }
+.who_bg03 {width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: url(../img/port002_03.png) no-repeat; background-size: contain; }
+
 .who_text {background: #fff; width: 100%; margin-top: 10vh; padding-bottom: 100vh; position: relative;}
-.svg {position: absolute; width: 300px; height: 300px; top: -150px; left: 50%;  transform: translateX(-50%); }
+.svg {position: absolute; width: 300px; height: 300px; top: -150px; left: 50%;  transform: translateX(-50%); z-index: 3; }
 .svg  svg{animation: svg 4s infinite linear;}
 @keyframes svg {
     0%{transform: rotate(360deg);}
@@ -122,7 +126,7 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 
 .who_text_about {padding-top: 100px; text-align: center;  color: #000; position: relative;}
 .who_text_about strong {font-size: 14vw; font-family: var(--font-main7);}
-.me_img {position: absolute; left: 0; top: 50%; width: 45%; }
+.me_img {position: absolute; left: 0; top: 50%; width: 45%; display: inline-block; }
 .me_img img {width: 80%; border-radius: 5%;}
 .me_img .me_img_text {font-size: 7vw; white-space: nowrap; font-family: var(--font-main3); -webkit-text-fill-color: transparent; -webkit-text-stroke-color: #000; -webkit-text-stroke-width: 2px; }
 .who_text_about p {font-size: 3vw; width: 45%; margin:20vh 0 0 50%; text-align: right; font-family: var(--font-kr); letter-spacing: 5px; word-break: keep-all;}
@@ -146,8 +150,8 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 /*web*/
 .web {position: relative; height: 500vh;}
 .web_bg {background: url(https://images.unsplash.com/photo-1550876542-8f7f453d0bed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80) no-repeat; background-size: 100%; filter: hue-rotate(80deg); position: fixed; height: 100vh; width: 100%; top: 0; z-index: -1; }
-.web_tit {font-size: 10vw; text-align: center; padding-top: 15vw; text-transform: uppercase; font-family: var(--font-main7); color: #fff; line-height: 1; background: #000; padding-bottom: 15vw; margin-bottom: 50vw;}
-
+.web_tit {font-size: 10vw; text-align: center; padding-top: 15vw; text-transform: uppercase; font-family: var(--font-main7); color: #fff; line-height: 1; background: #000; padding-bottom: 15vw; margin-bottom: 50vw; overflow: hidden;}
+.web_tit p {z-index: -2;}
 .web_wrap {background: #000; width: 100%; position: fixed; top: 100%; left: 0; height: 100vh;  }
 .web_list { position: relative; width: 100%;}
 .web_list > div {display: flex; align-items: center; justify-content: center; overflow: hidden; padding-right: 2vw; width: 75%; height: 100vh;}
@@ -161,7 +165,7 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 .web_list01 {background: rgb(255, 194, 0); border-radius: 50px; position: absolute; top: 0; left: 3vw; z-index: 3;}
 .web_list02 {background: rgb(43, 73, 172); border-radius: 50px; position: absolute; top: 0; left: 6vw; z-index: 2;}
 .web_list03 {background: rgb(235, 6, 13); border-radius: 50px; position: absolute; top: 0; left: 9vw; z-index: 1;}
-.web_list04 {background: rgb(243, 112, 40); border-radius: 50px; position: absolute; top: 0; left: 12vw; z-index: 0;}
+.web_list04 {background: rgb(210,127,154); border-radius: 50px; position: absolute; top: 0; left: 12vw; z-index: 0;}
 
 .web_list01 .wl_bg {background: url(../img/Old-TV-Mockup01.png) no-repeat; background-size: contain; background-position: center  center;}
 .web_list02 .wl_bg {background: url(../img/Old-TV-Mockup02.png) no-repeat; background-size: contain; background-position: center  center;}
@@ -172,9 +176,9 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 
 /*모바일*/
 .mobile_wrap {padding-top: 870vh; width: 100%; background: url(../img/mo_bg03.png);}
-.mobile_list {display: grid; grid-template-columns: 33.33% 33.33% 33.33%; grid-auto-rows: minmax(100px, auto); position: relative;}
+.mobile_list {display: grid; grid-template-columns: 33.33% 33.33% 33.33%; grid-auto-rows: minmax(100px, auto); position: relative; }
 .mobile_list > div {height: 850px; position: relative; }
-.mobile_tit {position: absolute; top: -40vh; right: 10vw; font-size: 13vw; color: #fff; font-family: var(--font-main7);}
+.mobile_tit {position: absolute; top: -40vh; right: 10vw; font-size: 13vw; color: #fff; font-family: var(--font-main7); }
 .mobile_list01 {grid-column-start: 1;  grid-row-start: 1; grid-row-end: 3; background: url(../img/Realistic01_01.png)center center  no-repeat; background-size: contain; }
 .mobile_list02 {grid-column-start: 3;  grid-row-start: 2; grid-row-end: 4; background: url(../img/Realistic02_01.png)center center  no-repeat; background-size: contain;}
 .mobile_list03 {grid-column-start: 2; grid-row-start: 3; grid-row-end: 7; background: url(../img/Realistic03_01.png)center center  no-repeat; background-size: contain;}
