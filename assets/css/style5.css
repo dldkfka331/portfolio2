@@ -125,7 +125,8 @@ body{
 text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); font-size: 5vw; color: #fff; font-family: var(--font-main6);}
 
 .who_text_about {padding-top: 100px; text-align: center;  color: #000; position: relative;}
-.who_text_about strong {font-size: 14vw; font-family: var(--font-main7);}
+.who_text_about strong {display: inline-block; font-size: 14vw; font-family: var(--font-main7);  transform: skewx(0deg); transition: transform .3s; }
+.who_text_about strong:hover {transform: skewx(-30deg); transition: transform .5s;}
 .me_img {position: absolute; left: 0; top: 50%; width: 45%; display: inline-block; }
 .me_img img {width: 80%; border-radius: 5%;}
 .me_img .me_img_text {font-size: 7vw; white-space: nowrap; font-family: var(--font-main3); -webkit-text-fill-color: transparent; -webkit-text-stroke-color: #000; -webkit-text-stroke-width: 2px; }
@@ -148,10 +149,10 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 
 
 /*web*/
-.web {position: relative; height: 500vh;}
-.web_bg {background: url(https://images.unsplash.com/photo-1550876542-8f7f453d0bed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80) no-repeat; background-size: 100%; filter: hue-rotate(80deg); position: fixed; height: 100vh; width: 100%; top: 0; z-index: -1; }
-.web_tit {font-size: 10vw; text-align: center; padding-top: 15vw; text-transform: uppercase; font-family: var(--font-main7); color: #fff; line-height: 1; background: #000; padding-bottom: 15vw; margin-bottom: 50vw; overflow: hidden;}
-.web_tit p {z-index: -2;}
+.web {position: relative; background: #000; }
+.web_tit {font-size: 10vw; text-align: center; padding-top: 15vw; text-transform: uppercase; font-family: var(--font-main7); color: #fff; line-height: 1; background: #000; padding-bottom: 15vw; overflow: hidden;}
+.web_tit p {z-index: -1;}
+.web_bg {background: url(https://images.unsplash.com/photo-1550876542-8f7f453d0bed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80) no-repeat; background-size: cover; filter: hue-rotate(80deg); background-attachment: fixed; width: 100%; height: 100vh; }
 .web_wrap {background: #000; width: 100%; position: fixed; top: 100%; left: 0; height: 100vh;  }
 .web_list { position: relative; width: 100%;}
 .web_list > div {display: flex; align-items: center; justify-content: center; overflow: hidden; padding-right: 2vw; width: 75%; height: 100vh;}
