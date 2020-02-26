@@ -3,14 +3,11 @@ $(function(){
     var s = skrollr.init(
         smoothScrolling = true
     );
-        
 
-    $('#contents').imagesLoaded( function() {
-       
-
-            //로딩
-            let mainText = $(".main_tit > h1").text().split('').join("</span><span>");
-            mainText ="<span>"+ mainText +"</span>";
+    $('#contents').imagesLoaded(function(){
+    //로딩
+    let mainText = $(".main_tit > h1").text().split('').join("</span><span>");
+        mainText ="<span>"+ mainText +"</span>";
         $(".main_tit > h1").html(mainText);
         $(".main_tit > h1").find("span").each(function(index){
             setTimeout(function(){
@@ -29,7 +26,6 @@ $(function(){
                 $(".main_row").fadeIn();
             },2500);
         }, 3000);
-
       });
 
 
@@ -50,6 +46,12 @@ $(function(){
         $(this).toggleClass("click");
         $(".nav").toggleClass("click");
     });
+    $("a[href^='#']").on("click",function(){
+        let target = $($(this).attr("href"));
+        if(target.length){
+          $("html, body").animate({scrollTop: target.offset().top},600,"easeInOutExpo")
+        }
+      });
 
     //소개부분 클릭이미지 반짝이기
     setInterval(click, 500);
