@@ -1,8 +1,15 @@
 /* 스크롤 */
 .ScrollTop {position: fixed; top: 20px; left: 20px; width: 50px; height: 30px; background: #fff; color: #000; text-align: center; line-height: 30px; z-index: 9999; }
 
-
-
+.loading{
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0px;
+    top:0px;
+    background:#fff;
+    z-index:1000; /* 이 값으로 레이어의 위치를 조정합니다. */
+}
 
 @font-face { font-family: '양진체'; src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff'); font-weight: normal; font-style: normal; } 
 
@@ -42,6 +49,12 @@ body{
 .nav ul li:nth-child(3) {background: url(../img/wci04.png) no-repeat; background-position: 0 -70px; background-size: cover;}
 .nav ul li:nth-child(4) {background: url(../img/wci04.png) no-repeat; background-position: 0 -105px; background-size: cover;}
 
+/*cursor*/
+.cursor {position: absolute; border: 3px solid #fff; width: 30px; height: 30px; border-radius: 50%; z-index:1000; user-select: none; pointer-events:none; animation: cursor 1s infinite}
+@keyframes cursor {
+    0% {}
+    100% {}
+}
 
 /*전체*/
 #contents {}

@@ -1,5 +1,9 @@
 $(function(){
 
+    $(window).load(function(){
+        $(".loading").fadeOut();
+    });
+    
     //skrollr
     var s = skrollr.init(
         smoothScrolling = true
@@ -26,7 +30,6 @@ $(function(){
             $(".main_row").fadeIn();
         },2500);
     }, 3000);
-
 
 
     //메인 화살표
@@ -62,9 +65,14 @@ $(function(){
     });
 
      //소개부분 이미지 드래그 가능
-     $( function() {
+     $(function(){
         $( ".who_click_img > div" ).draggable();
-      } );
-    
+      });    
+
+      $("body, html").mousemove(function(e){
+         let x= e.pageX - 15;
+         let y= e.pageY - 15;
+        $(".cursor").css({"left": x, "top": y});
+      });  
     
 });
