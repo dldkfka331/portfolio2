@@ -223,7 +223,7 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 .web_list > div:nth-child(3) .wl_text h4 {background-color: rgb(238, 207, 34);box-shadow: 10px 9px 0px 0px rgb(190, 166, 27);}
 .web_list > div:nth-child(4) .wl_text h4 {background-color: rgb(148, 73, 235);box-shadow: 10px 9px 0px 0px rgb(103, 45, 168);}
 
-.web_list .wl_text .wl_view {position: absolute; bottom: -6vw; right: -.5vw; width: 120px; height: 60px; background: #fff; border-radius: 30%; font-family: var(--font-main4); text-transform: uppercase; color: #000; font-size: 18px; font-weight: bold; text-align: center; line-height: 60px; transition: transform .3s,  box-shadow .3s;}
+.web_list .wl_text .wl_view {position: absolute; bottom: -6vw; right: -.5vw; width: 120px; height: 50px; background: #fff; border-radius: 30%; font-family: var(--font-main4); text-transform: uppercase; color: #000; font-size: 18px; font-weight: bold; text-align: center; line-height: 50px; transition: transform .3s,  box-shadow .3s;}
 .web_list .wl_text .wl_view:after {content: ''; position: absolute; left: 0px; top: 50%; transform: translatey(-50%); border-style: solid; border-width: 10px 10px 10px 0; border-color: transparent #fff transparent transparent; transition: transform .3s; z-index: -1;}
 .web_list .wl_text .wl_view:hover {transform: translateX(10px); box-shadow: 8px 8px #bbb; }
 .web_list .wl_text .wl_view:hover:after {transform: translateX(-10px) translatey(-50%);}
@@ -265,4 +265,19 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 
 /*me*/
 .me {background: #000; position: relative; }
-.me_tit {}
+.me_tit {font-size: 10vw; text-align: center; padding-top: 15vw; text-transform: uppercase; font-family: var(--font-main7); color: #fff; line-height: 1; overflow: hidden; }
+.me_text{overflow: hidden; height: 200vh; padding-top: 50vh;}
+.me_text >div {float: left; width: 50%; height: 100%; }
+.me_left {position: relative;}
+.me_left > div {width: 100%; height: 100%; background-size: contain; position: absolute; top: 0; left: 0;}
+
+.me_left_bg01 {background: url(../img/block01.png) no-repeat; z-index: 5;}
+.me_left_bg02 {background: url(../img/block02.png) no-repeat; z-index: 4;}
+.me_left_bg03 {background: url(../img/block03.png) no-repeat; z-index: 3;}
+.me_left_bg04 {background: url(../img/block04.png) no-repeat; z-index: 2;}
+.me_left_bg05 {background: url(../img/block05.png) no-repeat; z-index: 1;}
+
+.me_right {padding-top: 10vw; font-size: 8vw; color: #fff; line-height: 1; text-transform: uppercase; font-family: var(--font-main3);}
+
+.me_contact {position: fixed; width: 100%; height: 100vh; top: 0; left: 0; background: #000;}
+.me_contact p {font-size: 15vw; color: #fff; position: absolute; top: 50%; left: 50%; white-space: nowrap; font-family: var(--font-main3);}
