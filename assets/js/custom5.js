@@ -4,7 +4,31 @@ $(function(){
     var s = skrollr.init(
         smoothScrolling = true
     );
-    
+        
+    //로딩
+    let mainText = $(".main_tit > h1").text().split('').join("</span><span>");
+        mainText ="<span>"+ mainText +"</span>";
+    $(".main_tit > h1").html(mainText);
+    $(".main_tit > h1").find("span").each(function(index){
+        setTimeout(function(){
+            $(".main_tit > h1").find("span").eq(index).show();
+        },100*(index+1));
+    });
+
+    setTimeout(function(){
+        $(".main_box > div").each(function(index){
+            setTimeout(function(){
+                $(".main_box > div").eq(index).show();
+                $(".main_box > div").eq(-index).show();
+            },100*(index+1));
+        });    
+        setTimeout(function(){
+            $(".main_row").fadeIn();
+        },2500);
+    }, 3000);
+
+
+
     //메인 화살표
     setInterval(down,1000);
     function down(){
@@ -23,9 +47,6 @@ $(function(){
         $(".nav").toggleClass("click");
     });
 
-   
-
-
     //소개부분 클릭이미지 반짝이기
     setInterval(click, 500);
     function click(){
@@ -37,9 +58,13 @@ $(function(){
         let target =$(this);
         let index =target.index();
         let cookies = $(".who_click_img > div").eq(index);
-        cookies.css("display" , "block");
+        cookies.css({"opacity":"1", "z-index":"1", "height":"400px"});
     });
 
+     //소개부분 이미지 드래그 가능
+     $( function() {
+        $( ".who_click_img > div" ).draggable();
+      } );
     
     
 });
