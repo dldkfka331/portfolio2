@@ -4,27 +4,33 @@ $(function(){
         smoothScrolling = true
     );
         
-    //로딩
-    let mainText = $(".main_tit > h1").text().split('').join("</span><span>");
-        mainText ="<span>"+ mainText +"</span>";
-    $(".main_tit > h1").html(mainText);
-    $(".main_tit > h1").find("span").each(function(index){
-        setTimeout(function(){
-            $(".main_tit > h1").find("span").eq(index).show();
-        },100*(index+1));
-    });
 
-    setTimeout(function(){
-        $(".main_box > div").each(function(index){
+    $('#contents').imagesLoaded( function() {
+       
+
+            //로딩
+            let mainText = $(".main_tit > h1").text().split('').join("</span><span>");
+            mainText ="<span>"+ mainText +"</span>";
+        $(".main_tit > h1").html(mainText);
+        $(".main_tit > h1").find("span").each(function(index){
             setTimeout(function(){
-                $(".main_box > div").eq(index).show();
-                $(".main_box > div").eq(-index).show();
+                $(".main_tit > h1").find("span").eq(index).show();
             },100*(index+1));
-        });    
+        });
+
         setTimeout(function(){
-            $(".main_row").fadeIn();
-        },2500);
-    }, 3000);
+            $(".main_box > div").each(function(index){
+                setTimeout(function(){
+                    $(".main_box > div").eq(index).show();
+                    $(".main_box > div").eq(-index).show();
+                },100*(index+1));
+            });    
+            setTimeout(function(){
+                $(".main_row").fadeIn();
+            },2500);
+        }, 3000);
+
+      });
 
 
     //메인 화살표
