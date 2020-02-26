@@ -1,16 +1,6 @@
 /* 스크롤 */
 .ScrollTop {position: fixed; top: 20px; left: 20px; width: 50px; height: 30px; background: #fff; color: #000; text-align: center; line-height: 30px; z-index: 9999; }
 
-.loading{
-    width:100%;
-    height:100%;
-    position:fixed;
-    left:0px;
-    top:0px;
-    background:#fff;
-    z-index:1000; /* 이 값으로 레이어의 위치를 조정합니다. */
-}
-
 @font-face { font-family: '양진체'; src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff'); font-weight: normal; font-style: normal; } 
 
 body{
@@ -23,11 +13,14 @@ body{
     --font-main7: 'Barriecito', cursive;
     --font-roboto: 'Roboto', sans-serif;
     --font-kr: '양진체';
-
 }
 
+body, html {cursor: url(../img/mouse02_yell03.png), auto}
+
+
+
 /*ham*/
-.ham {position: fixed; top: 20px; right: 40px; z-index: 5; width: 40px; height: 40px; cursor: pointer;}
+.ham {position: fixed; top: 20px; right: 40px; z-index: 5; width: 40px; height: 40px;}
 .ham span {background: rgb(235, 6, 13); width: 40px; height: 5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .ham span:before{content: ''; background: rgb(255, 194, 0); width: 40px; height: 5px; position: absolute; top: 12px; left: 0; transition: left .3s, transform .3s;}
 .ham span:after{content: ''; background: rgb(33, 132, 35); width: 40px; height: 5px; position: absolute; bottom: 12px; left: 0; transition: left .3s, transform .3s;}
@@ -40,7 +33,7 @@ body{
 .ham.click span:after{transform: rotate(-45deg) translate(-16px);  transition: left .3s, transform .3s;}
 
 /* nav */
-.nav {position: fixed; top: 80px; right: -200px; z-index: 5; cursor: pointer; text-align: right; text-transform: uppercase; white-space: nowrap; transition: right .3s; }
+.nav {position: fixed; top: 80px; right: -200px; z-index: 5; text-align: right; text-transform: uppercase; white-space: nowrap; transition: right .3s; }
 .nav ul li {margin: 3%; padding: 0 10px; right: -200px;}
 .nav ul li a {display: block; font-size: 1.2vw; font-family:  var(--font-roboto); font-weight: bold; color: #ff7301;}
 .nav.click {right: 40px;}
@@ -48,13 +41,6 @@ body{
 .nav ul li:nth-child(2) {background: url(../img/wci04.png) no-repeat; background-position: 0px -35px; background-size: cover;}
 .nav ul li:nth-child(3) {background: url(../img/wci04.png) no-repeat; background-position: 0 -70px; background-size: cover;}
 .nav ul li:nth-child(4) {background: url(../img/wci04.png) no-repeat; background-position: 0 -105px; background-size: cover;}
-
-/*cursor*/
-.cursor {position: absolute; border: 3px solid #fff; width: 30px; height: 30px; border-radius: 50%; z-index:1000; user-select: none; pointer-events:none; animation: cursor 1s infinite}
-@keyframes cursor {
-    0% {}
-    100% {}
-}
 
 /*전체*/
 #contents {}
@@ -68,10 +54,9 @@ body{
 /*container*/
 .container {width: 100%;}
 
-
 /*main*/
 .main {position: relative;}
-.main .main_top {position: absolute; top: 2%; left: 50%; width: 40%; transform: translateX(-50%); display: flex; justify-content: space-around;}
+.main .main_top {position: absolute; top: 2%; left: 50%; width: 40%; transform: translateX(-50%); display: flex; justify-content: space-around; z-index: 1000;}
 .main .main_top strong {position: relative; font-family: var(--font-roboto);}
 .main .main_top strong:after {content: 'X'; position: absolute; top: 20%; right: -100%; color: rgba(255, 255, 255, 0.6); font-size: .8vw; font-weight: bold;}
 .main .main_top strong:last-child:after {display: none;}
@@ -177,7 +162,7 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 .me_img .me_img_text {font-size: 7vw; white-space: nowrap; font-family: var(--font-main3); -webkit-text-fill-color: transparent; -webkit-text-stroke-color: #000; -webkit-text-stroke-width: 2px; }
 .who_text_about p {font-size: 3vw; width: 45%; margin:20vh 0 0 50%; text-align: right; font-family: var(--font-kr); letter-spacing: 5px; word-break: keep-all; line-height: 1.7;}
 .who_text_about p span[class^="who_click"] {
-    cursor: pointer;  padding: 1%;
+  padding: 1%;
     -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.39) 50%, rgba(0,0,0,1) 80%);
     -webkit-mask-size: 200%;
     animation: shine 2s infinite;
@@ -294,3 +279,5 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 
 .me_contact {position: fixed; width: 100%; height: 100vh; top: 0; left: 0; background: #000;}
 .me_contact p {font-size: 15vw; color: #fff; position: absolute; top: 50%; left: 50%; white-space: nowrap; font-family: var(--font-main3);}
+
+.mouseee {cursor: url(../img/mouse02_blue.png), auto}

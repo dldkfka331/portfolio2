@@ -1,9 +1,4 @@
 $(function(){
-
-    $(window).load(function(){
-        $(".loading").fadeOut();
-    });
-    
     //skrollr
     var s = skrollr.init(
         smoothScrolling = true
@@ -68,11 +63,5 @@ $(function(){
      $(function(){
         $( ".who_click_img > div" ).draggable();
       });    
-
-      $("body, html").mousemove(function(e){
-         let x= e.pageX - 15;
-         let y= e.pageY - 15;
-        $(".cursor").css({"left": x, "top": y});
-      });  
     
 });
