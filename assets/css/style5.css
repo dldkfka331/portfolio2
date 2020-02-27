@@ -206,7 +206,7 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 .web {position: relative; background: #000; }
 .web_tit {font-size: 10vw; text-align: center; padding-top: 15vw; text-transform: uppercase; font-family: var(--font-main7); color: #fff; line-height: 1; background: #000; padding-bottom: 15vw; overflow: hidden;}
 .web_tit p {z-index: -1;}
-.web_bg {background: url(https://images.unsplash.com/photo-1550876542-8f7f453d0bed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80) no-repeat; background-size: cover; filter: hue-rotate(80deg); background-attachment: fixed; width: 100%; height: 100vh; }
+.web_bg {background: url(../img/web_bg.jpg) no-repeat center; background-size: cover; filter: hue-rotate(80deg); background-attachment: fixed; width: 100%; height: 100vh; }
 .web_wrap {background: #000; width: 100%; position: fixed; top: 100%; left: 0; height: 100vh; }
 .web_list { position: relative; width: 100%;}
 .web_list > div {display: flex; align-items: center; justify-content: center; overflow: hidden; padding-right: 2vw; width: 75%; height: 100vh;}
@@ -275,6 +275,8 @@ text {position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); 
 .me_left_bg05 {background: url(../img/block05.png) no-repeat; z-index: 1;}
 
 .me_right {padding-top: 10vw; font-size: 8vw; color: #fff; line-height: 1; text-transform: uppercase; font-family: var(--font-main3);}
+.me_right span {font-size: 4vw; position: relative;}
+.me_right span:after {content: '%'; font-size: 3vw; position: absolute; bottom: 0; right: -40px;}
 
 .me_contact {position: fixed; width: 100%; height: 100vh; top: 0; left: 0; background: #000;}
 .me_contact p {font-size: 15vw; color: #fff; position: absolute; top: 50%; left: 50%; white-space: nowrap; font-family: var(--font-main3);}

@@ -101,4 +101,11 @@ $(function(){
         popUp('https://dldkfka331.github.io/Millie/');
     });
 
+    //기록
+    if($(".me_right span").is( ":visible" ) ){
+        $('.counter').counterUp({
+            delay: 100, 
+            time: 3000 
+        });
+    }
 });
