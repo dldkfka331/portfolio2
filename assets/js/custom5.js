@@ -1,10 +1,11 @@
 $(function(){
+    
+    
     //skrollr
     var s = skrollr.init(
         smoothScrolling = true
     );
 
-    $('#contents').imagesLoaded(function(){
     //로딩
     let mainText = $(".main_tit > h1").text().split('').join("</span><span>");
         mainText ="<span>"+ mainText +"</span>";
@@ -26,7 +27,6 @@ $(function(){
                 $(".main_row").fadeIn();
             },2500);
         }, 3000);
-      });
 
 
     //메인 화살표
@@ -72,4 +72,33 @@ $(function(){
         $( ".who_click_img > div" ).draggable();
       });    
     
+
+     //모바일 사이트 팝업창 
+    function popUp(siteUrl){
+        let url = siteUrl;
+        let option = "height = 900, width = 600, top= 100, left=100,  scroll=no, toolbar=0,menubar=no";
+        window.open(url,'mobile',option);
+    }
+      
+    $(".mobile_list01").click(function(e){
+        e.preventDefault();    
+        popUp('https://dldkfka331.github.io/responsive/mobile.html');
+    });
+    $(".mobile_list02").click(function(e){
+        e.preventDefault();    
+        popUp('https://dldkfka331.github.io/nugu/mobile.html');
+    });
+    $(".mobile_list03").click(function(e){
+        e.preventDefault();    
+        popUp('https://dldkfka331.github.io/megabox/mobile.html');
+    });
+    $(".mobile_list04").click(function(e){
+        e.preventDefault();    
+        popUp('https://dldkfka331.github.io/appleMusic/');
+    });
+    $(".mobile_list05").click(function(e){
+        e.preventDefault();    
+        popUp('https://dldkfka331.github.io/Millie/');
+    });
+
 });

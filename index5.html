@@ -24,12 +24,12 @@
     <script>
         var filter = "win16|win32|win64|mac|macintel"; 
         if ( navigator.platform ) { if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
-            alert('모바일 접속'); 
             window.location.href('http://dldkfka331.dothome.co.kr/responsive/index.html');
-            } else { 
-                alert('pc 접속'); 
-            }
+        } else { 
+            alert('pc 접속'); 
         }
+        }
+
     </script>
 </head>
 <body>
@@ -256,33 +256,40 @@
                             <div class="mobile_list01 mouseee" data-18500="transform: translateY(150px)" data-19600="transform: translateY(0)">
                                 <div class="mbl_text">
                                     <p>Responsive</p>
-                                    <a href="#c">Visit</a>
+                                    <a href="#">Visit</a>
                                 </div>
                             </div>
                             <div class="mobile_list02 mouseee"  data-18900="transform: translateY(-200px)" data-20500="transform: translateY(0)">
                                 <div class="mbl_text">
                                     <p>NUGU</p>
-                                    <a href="#c">Visit</a>
+                                    <a href="#">Visit</a>
                                 </div>
                             </div>
                             <div class="mobile_list03 mouseee" data-19000="transform: translateY(350px)" data-20500="transform: translateY(-400px)">
                                 <div class="mbl_text">
                                     <p>megabox</p>
-                                    <a href="#c">Visit</a>
+                                    <a href="#">Visit</a>
                                 </div>
                             </div>
                             <div class="mobile_list04 mouseee" data-19600="transform: translateY(400px)" data-21000="transform: translateY(0)">
                                 <div class="mbl_text">
                                     <p>apple music</p>
-                                    <a href="#c">Visit</a>
+                                    <a href="#">Visit</a>
                                 </div>
                             </div>
                             <div class="mobile_list05 mouseee" data-19600="transform: translateY(-300px)" data-21500="transform: translateY(0)">
                                 <div class="mbl_text">
                                     <p>MILLIE</p>
-                                    <a href="#c">Visit</a>
+                                    <a href="#">Visit</a>
                                 </div>
                             </div>
+                        </div>
+                        <div class="mobile_list_popup">
+                            <div class="mobile_list_popup01"></div>
+                            <div class="mobile_list_popup02"></div>
+                            <div class="mobile_list_popup03"></div>
+                            <div class="mobile_list_popup04"></div>
+                            <div class="mobile_list_popup05"></div>
                         </div>
                     </div>          
                 </div>
@@ -341,6 +348,7 @@
     <script src="assets/js/skrollr.js"></script>
     <script src="assets/js/scrollEasing.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/custom5.js"></script>
     <script>
         $(window).scroll(function(){    
