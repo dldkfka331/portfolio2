@@ -25,7 +25,7 @@
         var filter = "win16|win32|win64|mac|macintel"; 
         if ( navigator.platform ) { if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
             alert('모바일 접속'); 
-            window.location.href('http://dldkfka331.dothome.co.kr/responsive/index.html');
+            window.location.replace('http://dldkfka331.dothome.co.kr/responsive/index.html');
             } else { 
                 alert('pc 접속'); 
             }
